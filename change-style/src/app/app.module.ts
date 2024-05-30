@@ -3,17 +3,19 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TextoformatterComponent } from './textoformatter/textoformatter.component';
-import { FormsModule } from '@angular/forms'; // Sin esto no me funcionaban el tema de los input
+import { FormsModule } from '@angular/forms';
+import { ListaComponent } from './lista/lista.component'; // Sin esto no me funcionaban el tema de los input
 
 @NgModule({
   declarations: [
     AppComponent,
-    TextoformatterComponent
+    TextoformatterComponent,
+    ListaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule //Hay que añadirlo aqui tambien 
   ],
   providers: [
     provideClientHydration()
