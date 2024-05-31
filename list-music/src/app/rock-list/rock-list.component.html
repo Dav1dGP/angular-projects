@@ -1,1 +1,6 @@
-<p>rock-list works!</p>
+<div class="wrapper">
+    <h1>Lista de éxitos Rock</h1>
+    <div *ngFor="let item of datosMusicales" class="card">
+      <h2>{{ item.nombreBanda }}</h2>
+    </div>
+</div>

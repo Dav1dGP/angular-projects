@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import mockDatosMusicales from '../assets/mock';
+import { DatosMusicales } from '../assets/dataType';
 
 @Component({
   selector: 'app-rock-list',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './rock-list.component.css'
 })
 export class RockListComponent {
+
+  datosMusicales: DatosMusicales[] = mockDatosMusicales;
 
 }
