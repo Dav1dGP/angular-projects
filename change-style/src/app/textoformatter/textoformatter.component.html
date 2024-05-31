@@ -1,0 +1,11 @@
+<h1>texto formatter</h1>
+<br>
+<div class="div1">
+    <input type="checkbox" [(ngModel)]="letraGrande"> Tamaño <br>
+    <input type="checkbox" [(ngModel)]="colorFondo"> Fondo <br>
+    <input type="checkbox" [(ngModel)]="letraColor"> Color <br>
+    <input type="checkbox" [(ngModel)]="letraItalica"> Letra <br>
+<br>
+<div class="div2" [ngStyle]="defineEstilos()">Texto</div>
+
+</div>
