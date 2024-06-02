@@ -1,12 +1,13 @@
 <div class="wrapper">
+
   <div class="header">
     <h1>Lista de éxitos Rock</h1>
     <div class="menu">
       <h3>Mostrar</h3>
-      <button (onclick)="switchView(true)" title="Vistas de Tarjetas" [class.active]="listGrid">
+      <button (click)="switchView(true)" title="Vistas de Tarjetas" [class.active]="listGrid">
         TARJETAS
       </button>
-      <button (onclick)="switchView(false)" title="Vista de Listas" [class.active]="listGrid">
+      <button (click)="switchView(false)" title="Vista de Listas" [class.active]="!listGrid">
         LISTA
       </button>
     </div>
@@ -17,7 +18,7 @@
         <div *ngFor="let item of datosMusicales" class="card">
           <img [src]="item.urlImagenAlbum" alt="{{item.mejorAlbum}}" class="card-image">
           <div class="card-content">
-            <h3>{{item.mejorAlbum}}</h3>
+            <div>{{item.mejorAlbum}}</div>
             <p>{{item.nombreBanda}}</p>
           </div>
         </div>
@@ -26,14 +27,14 @@
   
   <ng-template #listView>
     <div class="list-container">
-      <div *ngFor="let item of datosMusicales" class="list-item" class="list-image">
-        <img [src]="item.urlImagenAlbum" alt="{{item.mejorAlbum}}">
+      <div *ngFor="let item of datosMusicales" class="list">
+        <img [src]="item.urlImagenAlbum" alt="{{item.mejorAlbum}}" class="list-image">
         <div class="list-content">
-          <h3>{{item.mejorAlbum}}</h3>
+          <div>{{item.mejorAlbum}}</div>
           <p>{{item.nombreBanda}}</p>
         </div>
       </div>
-  </div>
+    </div>
   </ng-template>
 
 </div>
